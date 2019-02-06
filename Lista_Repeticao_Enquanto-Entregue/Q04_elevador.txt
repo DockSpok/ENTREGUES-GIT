@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/* Aluno RA 318210134 Mauro Siqueira Damasceno
+ * 4. Faça um programa que 
+ * == receba inicialmente a capacidade (em kg) de um elevador. 
+ * == O programa irá solicitar que o usuário informe o peso de cada pessoa 
+ * que for entrando no elevador, 
+ * == até que a sua capacidade seja satisfeita. 
+ * == Imprima o peso total das pessoas que estarão dentro do elevador, 
+ * == bem como a quantidade de pessoas. 
+ * == Emita uma mensagem informando quando a capacidade do elevador estiver esgotada.
+*/
+    namespace Q04_elevador
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double capacidade, pesoTotal = 0.00;
+            int qtPessoas = 0;
+            Console.WriteLine("Informe a Capacidade de carga do elevador [em Kg]");
+            capacidade = Convert.ToDouble(Console.ReadLine());
+            // Computar as pessoas que entram até atingir a capacidade total.
+            do
+            {
+                qtPessoas++;
+                Console.WriteLine("Capacidade total: {0}Kg.", capacidade);
+                Console.WriteLine("O peso total das pessoas dentro do elevador: {0}Kg.", pesoTotal);
+                Console.WriteLine("Informe o peso da pessoa nº{0} [em Kg]", qtPessoas);
+                double pesoPessoa = Convert.ToDouble(Console.ReadLine());
+                pesoTotal += pesoPessoa;
+            } while (pesoTotal < capacidade);
+
+            Console.WriteLine("\\\\     Capacidade {0}Kg esgotada!     ////", capacidade);
+            Console.WriteLine("A quantidade total de pessoas no elevador é {0}.", qtPessoas);
+            Console.ReadLine();
+        }
+    }
+}

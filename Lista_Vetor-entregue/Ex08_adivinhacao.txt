@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+8. Faça um programa que leia um vetor com 10 elementos. 
+Em seguida, solicite ao usuário que informe outros 5 valores. 
+Imprima quantos números que o usuário digitou estão contidos no primeiro vetor.
+*/
+namespace Ex08_adivinhacao
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] dados = new int[10] { 0,1,2,3,4,5,6,7,8,9 };
+            int[] adivinha = new int[10];
+            int acertos = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Digite cinco valores e veja se acertou. " + (i+1) + "º valor:");
+                adivinha[i] = Convert.ToInt32(Console.ReadLine());
+                for (int j = 0; j < 10; j++)
+                {
+                    if (adivinha[i] == dados [j]) acertos++;
+                }
+            }
+        Console.WriteLine("=====================================");
+        Console.WriteLine("Você teve " + acertos + " acertos.");
+        Console.WriteLine("=====================================");
+        Console.WriteLine("       Qualquer tecla para sair      ");
+        Console.ReadKey();
+        }
+    }
+}

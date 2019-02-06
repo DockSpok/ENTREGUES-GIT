@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia a idade e o sexo de 20 pessoas, e mostre quantas pessoas do
+sexo feminino existem entre 20 e 40 anos.
+*/
+namespace Ex02_idade_sexo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int mulheresNaFaixa = 0;
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("Informe o sexo [M / F]: ");
+                string sx = Convert.ToString(Console.ReadLine().ToUpper());
+                Console.WriteLine("Informe a idade: ");
+                int idade = Convert.ToInt32(Console.ReadLine());
+                if (sx == "F" && idade >= 20 && idade <= 40)
+                  mulheresNaFaixa++;
+            }
+            Console.WriteLine(mulheresNaFaixa + " mulher(es) estão entre 20 e 40 anos de idade.");
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+5. Faça um programa que leia um vetor com 10 elementos inteiros. 
+Solicite ao usuário que informe um novo número, e 
+verifique se este número encontra-se no vetor. 
+Caso positivo, imprima a(s) posição(ões) em que este número estiver no vetor. 
+Caso contrário, exiba uma mensagem avisando ao usuário informando que 
+o número não se encontra no vetor. O programa irá terminar quando o usuário 
+não quiser mais procurar um número no vetor.
+*/
+namespace Ex05_verifica_se_contem
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numeros = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(" Jogador '1' : Digite o " + (i + 1) + "º número:");
+                numeros[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            string denovo = "S";
+            while (denovo == "S")
+            {
+                Console.WriteLine("===================================================");
+                Console.WriteLine(" Jogador '2' : Advinhe um número que está no vetor: ");
+                int palpite = Convert.ToInt32(Console.ReadLine());
+
+                bool sucesso = false;
+                string posicao = "";
+
+                for (int j = 0; j < 10; j++)
+                {
+                    if (palpite == numeros[j])
+                    {
+                        sucesso = true;
+                        posicao += Convert.ToString(j);
+                        posicao += "_";
+                    }
+                }
+                if (sucesso == true)
+                {
+                    Console.WriteLine(" Você acertou! ' " + palpite +
+                                      " ' está na(s) posição(ões) [" + posicao + "] do vetor.");
+                }
+                else
+                {
+                    Console.WriteLine(" Não foi dessa vez. ' " + palpite + 
+                                      " ' não está no vetor.");
+                }
+                // Opção para o usuário jogar de novo.
+                Console.WriteLine(" Quer uma nova tentativa? [ S + Enter ]");
+                denovo = Convert.ToString(Console.ReadLine().ToUpper());
+            }
+        }
+    }
+}

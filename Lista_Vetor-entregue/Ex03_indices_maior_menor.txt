@@ -1,0 +1,50 @@
+FFusing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+3. Faça um programa que leia um vetor com 10 elementos e 
+imprima o maior e o menor elemento, bem como os seus índices.
+*/
+namespace Ex03_indices_maior_menor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int oMenor = 0, iMenor = 0, oMaior = 0, iMaior = 0;
+            int[] numeros = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Digite o " + (i + 1) + "º número:");
+                numeros[i] = int.Parse(Console.ReadLine());
+                // comparação para decidir qual o maior aproveita a iteração inicial
+                if (oMaior <= numeros[i])
+                {
+                    oMaior = numeros[i];
+                    iMaior = i;
+                }
+            }
+            Console.WriteLine(" Este é o MAIOR: " + oMaior + " e seu índice: " + iMaior);
+
+            // um FOR para comparar os elementos do vetor e decidir qual o menor.
+            oMenor = oMaior; 
+            for (int j = 0; j < 10; j++)
+            {
+                if (oMenor >= numeros[j])
+                {
+                    oMenor = numeros[j];
+                    iMenor = j;
+                }
+            }
+            Console.WriteLine(" Este é o MENOR: " + oMenor + " e seu índice: " + iMenor);
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

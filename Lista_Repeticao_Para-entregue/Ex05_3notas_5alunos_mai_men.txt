@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia 3 notas de 5 alunos, e que exiba a maior e menor notas de cada
+aluno.
+*/
+namespace Ex05_3notas_5alunos_mai_men
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                double menorNota = 0.0;
+                double maiorNota = 0.0;
+                Console.WriteLine("Informe o RA do " + (i + 1) + "º aluno:");
+                string aluno = Convert.ToString(Console.ReadLine());
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine("Informe a " + (j + 1) + "ª nota do aluno:");
+                    double nota = Convert.ToDouble(Console.ReadLine());
+                    if (maiorNota <= nota ) maiorNota = nota;
+                    else menorNota = nota;
+                }
+            Console.WriteLine("Aluno: " + aluno);
+            Console.WriteLine("Maior nota: " + maiorNota);
+            Console.WriteLine("Menor nota: " + menorNota);
+            Console.WriteLine("=====================================");
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+ * Aluno RA 318210134 Mauro Siqueira Damasceno
+ * 2. Faça um programa que leia uma matriz 4 x 4 de números inteiros. 
+ * Solicite ao usuário que informe uma coluna. 
+ * Imprima todos os elementos desta coluna. 
+ */
+namespace Ex02_4x4_print_coluna
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] numero = new int[4, 4];
+
+            // leia uma matriz 4 x 4 de números inteiros.
+            // duas estruturas 'for' aninhadas para definir 
+            // linhas 'l' e colunas 'c'
+
+            for (int l = 0; l < 4; l++)
+            {
+                for (int c = 0; c < 4; c++)
+                {
+                    Console.WriteLine("Digite um número inteiro para a posição [{0},{1}]", l, c);
+                    numero[l, c] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
+            // Solicite ao usuário que informe uma coluna.
+            Console.WriteLine("Escolha uma coluna de 0 a 3 para ver seus elementos");
+            int coluna = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("A coluna {0} contém os números:", coluna);
+
+            // Imprima todos os elementos desta coluna.
+            // Para isso variamos a linha e mantemos a coluna constante.
+            for (int l = 0; l < 4; l++)
+            {
+                Console.WriteLine(numero[l, coluna]);
+            }
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

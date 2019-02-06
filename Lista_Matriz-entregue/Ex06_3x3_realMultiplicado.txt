@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno.
+Carregue uma matriz 3 x 3 com números reais e 
+receba um valor, digitado pelo usuário. 
+Calcule e mostre a matriz resultante da multiplicação do número digitado 
+por cada elemento da matriz.
+*/
+namespace Ex06_3x3_realMultiplicado
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Criando e populando a matriz.
+            double[,] origem = new double[3, 3];
+            double[,] produtos = new double[3, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine("Entre com um número Real na posição [{0},{1}] da matriz ORIGEM", i, j);
+                    origem[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Entre com um multiplicador.");
+            double multiplicador = double.Parse(Console.ReadLine());
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    produtos[i, j] = origem[i, j] * multiplicador;
+                    Console.WriteLine("Na matriz PRODUTOS, a posição [{0},{1}] = {2}", i, j, produtos[i, j]);
+                }
+            }
+
+
+            // espera
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+  Aluno RA 318210134 Mauro Siqueira Damasceno
+6. Faça um programa que receba a nota final e o total de faltas de um conjunto indeterminado de alunos. 
+Imprima:
+a. A quantidade de alunos que obtiveram nota final maior ou igual a 90
+b. A quantidade de alunos que foram reprovados por nota (nota menor que 70) 
+    ou por falta (quantidade de faltas maior ou igual a 20).
+c. A maior e a menor nota
+d. A média de notas da turma
+e. O programa irá terminar quando o usuário informar uma nota negativa.
+ */
+namespace Q06_alunosFaltasEnotas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double notaFinal = 0, notaMax = 0, notaMin = 100, totTurma = 0;
+            int qtAs = 0, qtRep = 0, contAlunos = 0, faltas = 0;
+
+            Console.WriteLine("Informe a nota final do aluno [ 0 a 100 ]:");
+            // Chave para saída do looping.
+            Console.WriteLine("::: para terminar informe nota negativa ::");
+            notaFinal = Convert.ToDouble(Console.ReadLine());
+            // Começa a iteração indeterminada.
+            while (notaFinal >= 0)
+            {
+                contAlunos++;
+                totTurma += notaFinal;
+                Console.WriteLine("Informe o total de faltas do aluno [ 0 a 40 ]:");
+                faltas = int.Parse(Console.ReadLine());
+                // Cálculos para respostas.
+                if (notaFinal > 0)
+                {
+                    if (notaFinal >= 90)
+                    {
+                        qtAs++;
+                    }
+                    if (notaFinal < 70 || faltas >= 20)
+                    {
+                        qtRep++;
+                    }
+                    if (notaFinal > notaMax)
+                    {
+                        notaMax = notaFinal;
+                    }
+                    if (notaFinal < notaMin)
+                    {
+                        notaMin = notaFinal;
+                    }
+                }
+                // Repetindo o menu no fim do While.
+                Console.WriteLine("Informe a nota final do aluno [ 0 a 100 ]:");
+                // Chave para saída do looping.
+                Console.WriteLine("::: para terminar informe nota negativa ::");
+                notaFinal = Convert.ToDouble(Console.ReadLine());
+            }
+            Console.WriteLine("{0} alunos obtiveram nota final maior ou igual a 90.", qtAs);
+            Console.WriteLine("{0} foi a quantidade de alunos reprovados por nota" +
+                "(nota menor que 70) ou por falta(quantidade maior ou igual a 20).", qtRep);
+            Console.WriteLine("{0} foi a maior nota.", notaMax);
+            Console.WriteLine("{0} foi a menor nota.", notaMin);
+            Console.WriteLine("{0} foi a média das notas da turma.", (totTurma / contAlunos));
+
+            // Espera
+            Console.ReadLine();
+        }
+    }
+}

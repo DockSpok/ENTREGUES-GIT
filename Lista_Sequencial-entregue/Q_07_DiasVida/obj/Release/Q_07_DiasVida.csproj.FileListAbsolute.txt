@@ -1,0 +1,7 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\bin\Release\Q_07_DiasVida.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\bin\Release\Q_07_DiasVida.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\bin\Release\Q_07_DiasVida.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\obj\Release\Q_07_DiasVida.csprojAssemblyReference.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\obj\Release\Q_07_DiasVida.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\obj\Release\Q_07_DiasVida.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_07_DiasVida\obj\Release\Q_07_DiasVida.pdb

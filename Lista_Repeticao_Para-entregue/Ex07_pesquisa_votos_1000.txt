@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia a intenção de vote de 1000 pessoas para a presidência da
+república, calcule e mostre:
+- a quantidade de pessoas que votaram para cada candidato
+- a porcentagem de votos para cada candidato
+- a porcentagem de votos invalido(nulos e branco, separadamente)
+- o resultado da eleição
+*/
+namespace Ex07_pesquisa_votos_1000
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string intencao = "X";
+            string resultado = "vazio";
+            double qtEntrevistas = 1000; // 1000
+            double qtRespostas = 0;
+            double cand1 = 0; double cand2 = 0; double branco = 0; double nulo = 0;
+            for (int i = 0; i < qtEntrevistas; i++)
+            {
+                Console.WriteLine("_____________________________________");
+                Console.WriteLine("Intenção de voto do entrevistado: ");
+                Console.WriteLine("Opções: 1 / 2 / B / N :");
+                intencao = Convert.ToString(Console.ReadLine().ToUpper());
+                qtRespostas++;
+
+                if (intencao == "1") cand1++;
+                else
+                if (intencao == "2") cand2++;
+                else
+                if (intencao == "B") branco++;
+                else
+                if (intencao == "N") nulo++;
+                else
+                {
+                    Console.WriteLine("(!) Opção inválida. Entrevista não computada.(!)");
+                    i--;
+                }
+            }
+            // Análise das entrevistas:
+            if (cand1 > cand2) resultado = "Candidato 1 venceria.";
+            else
+            if (cand1 < cand2) resultado = "Candidato 2 Venceria.";
+            else resultado = "Empate técnico.";
+
+            // Cálculos e impressão de resultados:
+            Console.WriteLine("=====================================");
+            Console.WriteLine("Candidato 1 com:     " + cand1 + " votos.");
+            Console.WriteLine("representando  :     " + (cand1 / qtEntrevistas) * 100 + " % das intenções.");
+            Console.WriteLine("Candidato 2 com:     " + cand2 + " votos.");
+            Console.WriteLine("representando  :     " + (cand2 / qtEntrevistas) * 100 + " % das intenções.");
+            Console.WriteLine("Votos em Branco:     " + (branco / qtEntrevistas) * 100 + " % das intenções.");
+            Console.WriteLine("Votos Nulos    :     " + (nulo / qtEntrevistas) * 100 + " % das intenções.");
+            Console.WriteLine("RESULTADO      :     " + resultado);
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,7 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\bin\Debug\Q_04_Celsius_Fahrenheit.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\bin\Debug\Q_04_Celsius_Fahrenheit.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\bin\Debug\Q_04_Celsius_Fahrenheit.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\obj\Debug\Q_04_Celsius_Fahrenheit.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\obj\Debug\Q_04_Celsius_Fahrenheit.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\obj\Debug\Q_04_Celsius_Fahrenheit.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_04_Celsius_Fahrenheit\obj\Debug\Q_04_Celsius_Fahrenheit.csprojAssemblyReference.cache

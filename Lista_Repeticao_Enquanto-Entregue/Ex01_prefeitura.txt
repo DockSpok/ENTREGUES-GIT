@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+1. A prefeitura de uma cidade fez uma pesquisa entre os seus habitantes, 
+  coletando dados sobre o salário e o número de filhos. A prefeitura deseja saber : 
+a. A média do salário da população; 
+b. A média do número de filhos. 
+c. O final da leitura de dados dar-se-á com a entrada de salários negativos. 
+*/
+namespace Ex01_prefeitura
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double salario = 0, totSalarios = 0;
+            double familia = 0, qtFilhos = 0, totFilhos = 0;
+            Console.WriteLine("----- Informações da Familia -----");
+
+                Console.WriteLine("Qual o salário? [ informe salário negativo para terminar ]");
+                salario = Convert.ToDouble(Console.ReadLine());
+
+            while (salario >= 0)
+            {
+                Console.WriteLine("Quantos filhos?");
+                qtFilhos = Convert.ToDouble(Console.ReadLine());
+
+                // Inserindo os agregadores no início do iterador 
+		// para que não sejam computados no caso de saída.
+                familia++;
+                totSalarios += salario;
+                totFilhos += qtFilhos;
+		// Chave para saída do looping.
+                Console.WriteLine("Qual o salário? [ informe salário negativo para terminar ]");
+                salario = Convert.ToDouble(Console.ReadLine());
+            } 
+            // Imprimindo resultados.
+            Console.WriteLine(" A média do número de filhos da população é: "+ totFilhos / familia);
+            Console.WriteLine(" A média de salário das famílias é: "+ totSalarios / familia);
+            Console.ReadKey();
+        }
+    }
+}

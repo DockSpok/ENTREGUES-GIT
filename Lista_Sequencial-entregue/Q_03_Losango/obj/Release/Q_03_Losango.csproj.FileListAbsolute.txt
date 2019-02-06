@@ -1,0 +1,6 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\bin\Release\Q_03_Losango.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\bin\Release\Q_03_Losango.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\bin\Release\Q_03_Losango.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\obj\Release\Q_03_Losango.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\obj\Release\Q_03_Losango.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_03_Losango\obj\Release\Q_03_Losango.pdb

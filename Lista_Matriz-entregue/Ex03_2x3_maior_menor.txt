@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+ * Aluno RA 318210134 Mauro Siqueira Damasceno. 
+ * 3 .Faça um programa que carregue uma matriz 2 x 3, 
+ * calcule e mostre: 
+ * a) o maior elemento da matriz e sua respectiva posição, ou seja, linha e coluna; 
+ * b) o menor elemento da matriz e sua respectiva posição, ou seja, linha e coluna.
+ */
+namespace Ex03_2x3_maior_menor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] numero = new int[2, 3];
+            int oMaior = 0, lMaior = 0 , cMaior = 0;
+            //carregue uma matriz 2 x 3
+            for (int l = 0; l <2; l++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    Console.WriteLine("Digite um número inteiro na posição [{0},{1}]", l, c);
+                    numero[l,c] = Convert.ToInt16(Console.ReadLine());
+                    if (l > 0 & c > 0)
+                    {
+                        // calculando qual o maior e marcando sua posição.
+                        if (numero[l, c] >= numero[l - 1, c - 1])
+                        {
+                            oMaior = numero[l, c];
+                            lMaior = l;
+                            cMaior = c;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("O maior número digitado foi '{0}' " +
+                "e [{1},{2}] é a última posição onde ele é encontrado.", 
+                oMaior, lMaior, cMaior);
+
+            // novo 'for' para calcular o menor e sua posição.
+            int oMenor = oMaior;
+            int lMenor = 0, cMenor = 0;
+            for (int l = 0; l < 2; l++)
+            {
+                for(int c = 0; c < 3; c++)
+                {
+                    if (numero[l,c] <= oMenor)
+                    {
+                        oMenor = numero[l, c];
+                        lMenor = l;
+                        cMenor = c;
+                    }
+                }
+            }
+            // mostrando o menor e sua posição
+            Console.WriteLine("O menor número digitado foi '{0}' " +
+                "e [{1},{2}] é a última posição onde ele é encontrado.",
+                oMenor, lMenor, cMenor);
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+ Aluno RA 318210134 Mauro Siqueira Damasceno.
+ Faça um programa que leia uma matriz 4 x 4 e
+ imprima um vetor contendo o maior elemento de cada linha.
+*/
+namespace Ex07_4x4_vetorDeMaioresL
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Criando e populando a matriz.
+            double[,] origem = new double[4,4];
+            double[] vetorMaiorDaLinha = new double[4];
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.WriteLine("Entre com um número Real na posição [{0},{1}] da matriz ORIGEM", i, j);
+                    origem[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+            // Verificando quem é o maior em cada linha.
+            double maior;
+            for (int linha = 0; linha < 4; linha++)
+            {
+                // Abitrando o último da linha como maior para evitar o fim do parâmetro
+                maior = origem[linha, 3];
+                // Percorrer colunas dentro da mesma linha.
+                for (int coluna = 0; coluna < 4; coluna++)
+                {
+                    if (origem[linha, coluna] > maior)
+                    {
+                        vetorMaiorDaLinha[linha] = origem[linha, coluna];
+                        maior = origem[linha, coluna];
+                    }
+                }
+                // Antes de passar pra próxima linha imprime o maior da linha atual.
+                Console.WriteLine("O maior número da linha {0} é: {1}",linha, vetorMaiorDaLinha[linha]);
+            }
+            // espera
+            Console.ReadLine();
+        }
+    }
+}

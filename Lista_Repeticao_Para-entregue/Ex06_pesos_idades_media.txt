@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia a idade e peso de 30 pessoas. Calcule e mostre:
+- a quantidade de pessoas com mais de 90 kg
+- a média das idades das pessoas
+*/
+namespace Ex06_pesos_idades_media
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int totalPessoas = 30;
+            int totalIdades = 0;
+            int acimaDoPeso = 0;
+            for (int i = 0; i < totalPessoas; i++)
+            {
+                Console.WriteLine("_____________________________________");
+                Console.WriteLine("Qual a idade? ");
+                int idade = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Informe o peso: ");
+                double peso = Convert.ToDouble(Console.ReadLine());
+                totalIdades += idade;
+                if (peso > 90) acimaDoPeso++;
+            }
+            double mediaIdades = totalIdades / totalPessoas;
+            
+            Console.WriteLine("A quantidade de pessoas com mais de 90 Kg é de: " 
+                + acimaDoPeso);
+            Console.WriteLine("A média aritmética das" + totalPessoas + " idades informadas é: " 
+                + mediaIdades);
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

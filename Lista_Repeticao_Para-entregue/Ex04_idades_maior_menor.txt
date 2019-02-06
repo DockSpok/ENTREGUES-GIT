@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia a idade de 100 pessoas, e que exiba a maior e menor idade.
+*/
+namespace Ex_04_idades_maior_menor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int maisVelho = 0;
+            int maisNovo = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine("Informe a idade da " + (i+1) +"ª pessoa.") ;
+                int idade = Convert.ToInt32(Console.ReadLine());
+                if (maisVelho <= idade) maisVelho = idade;
+                else maisNovo = idade;
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("A pessoa mais nova tem " + maisNovo + " anos");
+            Console.WriteLine("A pessoa mais velha tem " + maisVelho + " anos");
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

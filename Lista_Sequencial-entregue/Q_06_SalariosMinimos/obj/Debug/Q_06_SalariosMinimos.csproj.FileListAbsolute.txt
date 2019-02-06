@@ -1,0 +1,7 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\bin\Debug\Q_06_SalariosMinimos.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\bin\Debug\Q_06_SalariosMinimos.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\bin\Debug\Q_06_SalariosMinimos.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\obj\Debug\Q_06_SalariosMinimos.csprojAssemblyReference.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\obj\Debug\Q_06_SalariosMinimos.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\obj\Debug\Q_06_SalariosMinimos.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_06_SalariosMinimos\obj\Debug\Q_06_SalariosMinimos.pdb

@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que leia o sexo e o peso de 10 pessoas, e mostre quantas pessoas do sexo
+masculino possuem peso entre 60 e 80 kg, bem como a quantidade de mulheres que
+possuem peso entre 50 e 70 kg.
+*/
+namespace Ex01_sexo_peso
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int homensNaFaixa = 0;
+            int mulheresNaFaixa = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Informe o sexo [M / F]: ");
+                string sx = Convert.ToString(Console.ReadLine().ToUpper());
+                Console.WriteLine("Informe o peso: ");
+                double ps = Convert.ToDouble(Console.ReadLine());
+                if (sx == "M" && ps >= 60 && ps <= 80)
+                {
+                    homensNaFaixa++;
+                }
+                else
+                    if (sx == "F" && ps >= 50 && ps <= 70)
+                    mulheresNaFaixa++;
+            }
+            Console.WriteLine(homensNaFaixa + " homen(s) pesa(m) entre 60 e 80 Kg.");
+            Console.WriteLine(mulheresNaFaixa + " mulher(es) pesa(m) entre 50 e 70 Kg.");
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

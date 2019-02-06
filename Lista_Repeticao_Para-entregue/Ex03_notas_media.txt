@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+Faça um programa que receba as 5 notas de 30 alunos, e para cada aluno, imprima sua
+média.
+*/
+namespace Ex03_notas_media
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+            Console.WriteLine("Informe o RA do " + (i+1) + "º aluno: ");
+            string ra = Convert.ToString(Console.ReadLine());
+            double nota = 0.0;
+            double total = 0.0;
+                for (int j = 0; j < 5; j++)
+                {
+                Console.WriteLine("Informe a " + (j+1) + "ª Nota: ");
+                nota = Convert.ToDouble(Console.ReadLine());
+                total += nota;
+                }
+                double media = total / 5;
+                Console.WriteLine("A média do aluno [" + ra + "] é: " + media);
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,6 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\obj\Debug\Q_02_Neg_Pos.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

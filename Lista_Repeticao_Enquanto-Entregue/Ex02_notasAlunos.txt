@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/* Aluno RA 318210134 Mauro Siqueira Damasceno
+ * 2. Faça um programa que solicite ao usuário que 
+ * informe a matrícula e as três notas de um conjunto de alunos. 
+ * O programa deverá exibir a mensagem informando se o aluno foi 
+ * :: aprovado (média maior ou igual a 70), 
+ * :: exame (nota maior ou igual a 60 e menor que 70) ou 
+ * :: reprovado (nota inferior a 60). 
+ * O programa irá terminar quando o usuário informar uma matrícula negativa. 
+ */
+namespace Ex02_notasAlunos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Qual o número de matrícula (inteiro) ?" +
+                    "[ informe inteiro negativo para terminar ]");
+            int matricula = Convert.ToInt32(Console.ReadLine());
+
+            while (matricula > 0)
+            {
+                Console.WriteLine("----- Informações do Aluno -----");
+                string resultado = "";
+                double nota = 0, totNota = 0, media = 0;
+
+                for (int i = 1; i < 4; i++)
+                {
+                    Console.WriteLine("Qual a {0}ª nota?", i);
+                    nota = Convert.ToDouble(Console.ReadLine());
+                    totNota += nota;
+                }
+                media = totNota / 3;
+                // Verificando resultado.
+                if (media >= 70)
+                    resultado = "Aprovado";
+                else
+                {
+                    if (media >= 60)
+                        resultado = "Exame";
+                    else
+                    {
+                        if (media < 60)
+                            resultado = "Reprovado";
+                    }
+                }
+                // Imprimindo resultados do aluno.
+                Console.WriteLine("Aluno RA '{0}'. Resultado: '{1}'. Nota média final: '{2}'."
+                                              , matricula, resultado, media);
+
+                Console.WriteLine("Qual o número de matrícula (inteiro) ? " +
+                          "[ informe inteiro negativo para terminar ]");
+                // Chave para saída do looping.
+                matricula = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.ReadKey();
+        }
+    }
+}

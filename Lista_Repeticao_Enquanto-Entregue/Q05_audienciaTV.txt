@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/* Aluno RA 318210134 Mauro Siqueira Damasceno
+ * 5. Foi feita uma pesquisa de audiência de canal de TV em várias casas de uma cidade , 
+ * em um determinado dia. Para cada casa consultada, foi fornecido o 
+ * numero do canal  (4,5,7,12) e 
+ * o numero de pessoas que estavam assistindo àquele canal. Faça um programa que : 
+a. == Leia um número indeterminado de dados ( Numero de canal e numero de pessoas assistindo ); 
+b. Calcule e mostre o 
+   == percentual de audiência de cada canal ; 
+c. == Para encerrar a entrada de dados, digite o número do canal ZERO
+ */
+namespace Q05_audienciaTV
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int canal = 0, pessoas = 0, totPessoas = 0;
+            double p4=0, p5=0, p7=0, p12=0;
+            do
+            {
+                totPessoas += pessoas;
+                Console.WriteLine("Quantas pessoas estão assistindo à TV?");
+                pessoas = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Qual o canal estão assistindo? (4,5,7,12 ou 0 para sair)");
+                canal = Convert.ToInt16(Console.ReadLine());
+                if (canal == 0)
+                {
+                    pessoas = 0;
+                    break;
+                }
+                else
+                    if (canal == 4) p4 += pessoas;
+                    else
+                        if (canal == 5) p5 += pessoas;
+                        else
+                            if (canal == 7) p7 += pessoas;
+                            else
+                                if (canal == 12) p12 += pessoas;
+            } while (canal != 0);
+            Console.WriteLine("Percentuais de audiência dos canais:");
+            Console.WriteLine("Canal  4 = {0}%", p4 / totPessoas * 100.00);
+            Console.WriteLine("Canal  5 = {0}%", p5 / totPessoas * 100.00);
+            Console.WriteLine("Canal  7 = {0}%", p7 / totPessoas * 100.00);
+            Console.WriteLine("Canal 12 = {0}%", p12 / totPessoas * 100.00);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,40 @@
+DDusing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+2. Faça um programa que leia um vetor com 10 elementos e 
+imprima inicialmente os elementos pares, e logo após, os elementos ímpares.
+*/
+namespace Ex02_pares_impares
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numeros = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("digite o " + (i + 1) + "º número:");
+                int elemento = int.Parse(Console.ReadLine());
+                numeros[i] = elemento;
+            }
+            Console.WriteLine(" Estes são os elementos PARES: ");
+            for (int j = 0; j < 10; j++)
+            {
+                if (numeros[j] % 2 == 0) Console.WriteLine(numeros[j]);
+            }
+            Console.WriteLine(" Estes são os elementos ÍMPARES: ");
+            for (int k = 0; k < 10; k++)
+            {
+                if (numeros[k] % 2 != 0) Console.WriteLine(numeros[k]);
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

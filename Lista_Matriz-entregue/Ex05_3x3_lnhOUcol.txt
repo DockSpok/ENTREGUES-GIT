@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/* 
+  Aluno RA 318210134 Mauro Siqueira Damasceno.
+   Faça um programa que leia uma matriz 3 x 3, e solicite ao usuário que escolha uma das seguintes opções:
+1- Operação com coluna
+2- Operação com linha
+Se o usuário escolher a opção 1, faça:
+- Solicite ao usuário que informe o número da coluna (de 1 a 3)
+- Imprima a coluna solicitada 
+- Imprima a soma dos elementos desta coluna
+Se o usuário escolher a opção 2, faça:
+- Solicite ao usuário que informe o número da linha (de 1 a 3)
+- Imprima a linha solicitada 
+- Imprima a soma dos elementos desta linha
+*/
+
+namespace Ex05_3x3_lnhOUcol
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Criando e populando a matriz.
+            int[,] matriz = new int[3, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine("Entre com um inteiro na posição [{0},{1}]",i,j);
+                    matriz[i,j] = int.Parse(Console.ReadLine());
+                }
+            }
+            int somaCol = 0, somaLin = 0;
+            // Menu.
+            Console.WriteLine("Escolha: [ 1 para operação em coluna ] [ 2 para operação em linha ]");
+            int opc = int.Parse(Console.ReadLine());
+            if (opc == 1)
+            {
+                Console.WriteLine("Escolha que Coluna quer somar [ de 1 a 3]");
+                int coluna = int.Parse(Console.ReadLine());
+                // Reduzir uma unidade porque o índice começa em zero.
+                coluna--;
+                for (int l = 0; l < 3; l++)
+                {
+                    somaCol += matriz[l, coluna];
+                    Console.WriteLine("[{0},{1}] = {2}", l, coluna, matriz[l, coluna]);
+                }
+                Console.WriteLine("A soma da coluna {0} = {1}", coluna, somaCol);
+            }
+            else 
+            {
+                if (opc == 2)
+                {
+                    Console.WriteLine("Escolha que Linha quer somar [ de 1 a 3]");
+                    int linha = int.Parse(Console.ReadLine());
+                    // Reduzir uma unidade porque o índice começa em zero.
+                    linha--;
+                    for (int c = 0; c < 3; c++)
+                    {
+                        somaLin += matriz[linha, c];
+                        Console.WriteLine("[{0},{1}] = {2}", linha, c, matriz[linha, c]);
+                    }
+                    Console.WriteLine("A soma da linha {0} = {1}", linha, somaLin);
+                }
+                else Console.WriteLine("Opção inválida.");
+            }
+            // espera
+            Console.ReadLine();
+        }
+    }
+}

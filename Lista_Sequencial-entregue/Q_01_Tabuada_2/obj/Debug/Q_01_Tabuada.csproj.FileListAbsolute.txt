@@ -1,0 +1,7 @@
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\bin\Debug\Q_01_Tabuada_2.exe.config
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\bin\Debug\Q_01_Tabuada_2.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\bin\Debug\Q_01_Tabuada_2.pdb
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\obj\Debug\Q_01_Tabuada.csprojAssemblyReference.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\obj\Debug\Q_01_Tabuada.csproj.CoreCompileInputs.cache
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\obj\Debug\Q_01_Tabuada_2.exe
+C:\Users\xmen\Documents\MAURO\001-UNA\01-B-PRAT-PROGRAMACAO\Lista_Sequencial\Q_01_Tabuada_2\obj\Debug\Q_01_Tabuada_2.pdb

@@ -1,0 +1,22 @@
+
+4. Faça um programa que carregue uma matriz 3 x 5 com números inteiros, 
+calcule e mostre a quantidade de elementos entre 15 e 20.
+
+5. Faça um programa que leia uma matriz 3 x 3, e solicite ao usuário que escolha uma das seguintes opções:
+1- Operação com coluna
+2- Operação com linha
+Se o usuário escolher a opção 1, faça:
+- Solicite ao usuário que informe o número da coluna (de 1 a 3)
+- Imprima a coluna solicitada 
+- Imprima a soma dos elementos desta coluna
+Se o usuário escolher a opção 2, faça:
+- Solicite ao usuário que informe o número da linha (de 1 a 3)
+- Imprima a linha solicitada 
+- Imprima a soma dos elementos desta linha
+
+6. Faça um programa que carregue uma matriz 3 x 3 com números reais e 
+receba um valor, digitado pelo usuário. 
+Calcule e mostre a matriz resultante da multiplicação do número digitado 
+por cada elemento da matriz.
+
+7. Faça um programa que leia uma matriz 4 x 4 e imprima um vetor contendo o maior elemento de cada linha.

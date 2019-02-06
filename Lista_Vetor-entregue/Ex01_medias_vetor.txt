@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+1. Faça um programa que leia um vetor com 10 elementos e 
+imprima a média destes elementos. 
+Imprima também inicialmente os elementos que estão acima da média. 
+Logo após, imprima os que estão abaixo da média.
+*/
+namespace Ex01_medias_vetor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] numeros = new double[10];
+            double soma = 0;
+
+	// Loop para popular o vetor
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("digite o " + (i + 1) + "º número:");
+                double elemento = Convert.ToDouble(Console.ReadLine());
+                numeros[i] = elemento;
+                soma += elemento;
+            }
+            double media = soma / 10;
+            Console.WriteLine("A média aritmética dos elementos informados é: " + media);
+            Console.WriteLine(" > Estão acima da média: ");
+
+	// Loop para escrever os elementos acima da média
+            for (int j = 0; j < 10; j++)
+            {
+                if (numeros[j] > media) Console.WriteLine(numeros[j]);
+            }
+            Console.WriteLine(" < Estão abixo da média: ");
+
+	// Loop para escrever os elementos abaixo da média
+            for (int k = 0; k < 10; k++)
+            {
+                if (numeros[k] < media) Console.WriteLine(numeros[k]);
+            }
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

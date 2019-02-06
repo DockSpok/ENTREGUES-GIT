@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+*Aluno RA 318210134 Mauro Siqueira Damasceno. 
+* Faça um programa que carregue uma matriz 3 x 5 com números inteiros, 
+* calcule e mostre a quantidade de elementos entre 15 e 20.
+*/
+namespace Ex04_3x5_qts_entre_15e20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cont = 0, num;
+            int[,] matriz3x5 = new int[3,5];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.WriteLine("Informe um número inteiro:");
+                    num = int.Parse(Console.ReadLine());
+                    matriz3x5[i, j] = num;
+                    if (num >= 15 && num <= 20)
+                    {
+                        cont++;
+                    }
+                }
+            }
+            Console.WriteLine("{0} dos números informados estão entre 15 e 20 (inclusive).", cont);
+            Console.ReadKey();
+        }
+    }
+}

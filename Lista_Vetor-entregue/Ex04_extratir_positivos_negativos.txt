@@ -1,0 +1,62 @@
+GGusing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+4. Faça um programa que leia um vetor com 10 elementos. 
+Crie outros dois vetores: um que armazene só os positivos, 
+e outro que armazene só os negativos. Em seguida, 
+imprima esses dois vetores.
+*/
+namespace Ex04_extratir_positivos_negativos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int contP = 0, ordP = 0, contN = 0, ordN = 0;
+            int [] numeros = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Digite o " + (i + 1) + "º número:");
+                numeros[i] = Convert.ToInt16(Console.ReadLine());
+                // dimensionar os novos vetores
+                if (numeros[i] > 0) contP++;
+                if (numeros[i] < 0) contN++;
+            }
+            // Criar os novos vetores
+            int[] positivos = new int[contP];
+            int[] negativos = new int[contN];
+            // preencher os novos vetores
+            for (int j = 0; j < 10; j++)
+            {
+                if (numeros[j] > 0)
+                {
+                    positivos[ordP] = numeros[j];
+                    ordP++;
+                }
+                if (numeros[j] < 0)
+                {
+                    negativos[ordN] = numeros[j];
+                    ordN++;
+                }
+            }
+            // Imprimir os resultados
+            for (int k = 0; k < contP; k++)
+            {
+                Console.WriteLine("positivos[" + k + "]" + positivos[k]);
+            }
+            Console.WriteLine("=====================================");
+            for (int n = 0; n < contN; n++)
+            {
+                Console.WriteLine("negativos[" + n + "]" + negativos[n]);
+            }
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       Qualquer tecla para sair      ");
+            Console.ReadKey();
+        }
+    }
+}

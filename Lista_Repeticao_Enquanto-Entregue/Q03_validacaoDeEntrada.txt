@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/* Aluno RA 318210134 Mauro Siqueira Damasceno
+    3. Faça um programa que leia as informações de sexo e idade de 10 pessoas. 
+    Calcule e exiba:
+a. Quantos homens entre 20 e 30 anos pesam mais de 60 kg
+b. Quantas mulheres acima de 40 anos pesam menos de 70 kg.
+c. O programa deverá validar o sexo informado. 
+Caso o usuário informe um sexo errado, 
+o programa deverá solicitar ao usuário que informe o sexo corretamente.
+*/
+namespace Q03_validacaoDeEntrada
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double peso = 0;
+            int idade = 0, acumM = 0, acumF = 0 ;
+            string sexo = "X";
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("=============================");
+                Console.WriteLine("{0} - Qual o peso?",i);
+                peso = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("{0} - Qual a idade?", i);
+                idade = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("{0} - Qual o sexo? [ M / F ]",i);
+                sexo = Convert.ToString(Console.ReadLine().ToUpper());
+                // Validação. Entra no while só se digitar errado.
+                while (sexo != "M" & sexo != "F")
+                {
+                    Console.WriteLine("Opção inválida. Digite [ M ou F ]");
+                    sexo = Convert.ToString(Console.ReadLine().ToUpper());
+                }
+                // Calculando os casos a e b.
+                if (sexo == "M")
+                {
+                    if (peso > 60)
+                    {
+                        if (idade >= 20 && idade <= 30)
+                        {
+                            acumM++;
+                        }
+                    }
+                }
+                else
+                {
+                    if (peso < 70)
+                    {
+                        if (idade > 40)
+                        {
+                            acumF++;
+                        }
+                    }
+                }
+            }
+            // Imprimir resultados.
+            Console.WriteLine(acumM +
+                " Homens entre 20 e 30 anos pesam mais de 60 kg.");
+            Console.WriteLine(acumF +
+                " Mulheres acima de 40 anos pesam menos de 70 kg.");
+            Console.ReadLine();
+        }
+    }
+}

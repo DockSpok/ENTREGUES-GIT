@@ -1,0 +1,34 @@
+GGusing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+/*
+Aluno RA 318210134 Mauro Siqueira Damasceno
+--
+7. Faça um programa que leia um vetor com 10 elementos. 
+Em seguida, troque todos os valores negativos do vetor por 0. 
+Imprima o vetor alterado.
+*/
+namespace Ex07_zerar_negativos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] sinais = new int[10] {0,-1,2,-3,4,5,-6,7,-8,9 };
+            for (int i = 0; i < 10; i++)
+            {
+                if (sinais[i] < 0)
+                {
+                    sinais[i] = 0;
+                }
+                Console.WriteLine("Vetor sinais[" + i + "] = " + sinais[i]);
+            }
+
+        Console.WriteLine("=====================================");
+        Console.WriteLine("       Qualquer tecla para sair      ");
+        Console.ReadKey();
+        }
+    }
+}
